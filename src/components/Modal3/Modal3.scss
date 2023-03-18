@@ -1,0 +1,137 @@
+.modal-3 {
+  &__header {
+    position: relative;
+    width: 90%;
+    margin: 2rem;
+
+    &-title {
+      font-size: 1.3rem;
+      margin: 2rem 0;
+    }
+
+    &-desc {
+      line-height: 2rem;
+      color: var(--dark-gray);
+      letter-spacing: 0.01rem;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    p:first-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid hsla(0, 0%, 48%, 0.12);
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    &.inactive {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        color: var(--moderate-cyan);
+        font-weight: 500;
+      }
+    }
+
+    &__desc {
+      color: var(--dark-gray);
+      margin-bottom: 2rem;
+      line-height: 2rem;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &-counter {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        &-left {
+          font-size: 1rem;
+          letter-spacing: -0.03rem;
+          color: var(--dark-gray);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.btn-card {
+  padding: 1.2rem 2rem;
+  width: 10.75rem;
+}
+
+.btn-disabled {
+  background-color: var(--dark-gray);
+}
+
+@media screen and (max-width: 450px) {
+  .modal-3 {
+    &__header {
+      margin: 1.2rem;
+      width: 90%;
+
+      &-title {
+        margin-bottom: 1.5rem;
+      }
+
+      &-desc {
+        font-size: 0.95rem;
+        letter-spacing: 0;
+        line-height: 1.8rem;
+      }
+    }
+
+    &__card {
+      padding: 2rem 1.5rem;
+
+      &__header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      &__desc {
+        font-size: 0.95rem;
+        letter-spacing: 0.01rem;
+      }
+
+      &__footer {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .btn-card {
+    width: 12rem;
+  }
+}
